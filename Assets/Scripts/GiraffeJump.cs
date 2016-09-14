@@ -18,11 +18,8 @@ public class GiraffeJump : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-
         // Jump
         if (Input.GetKeyDown(KeyCode.Space))
-            GetComponent<Rigidbody2D>().AddForce(Vector2.up * force);
-        if (transform.position.y == 3.41)
             GetComponent<Rigidbody2D>().AddForce(Vector2.up * force);
     }
 }
