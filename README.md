@@ -4,7 +4,7 @@
 # Project-Neckache
 > Infinite side scroller aimed at freeing a flying giraffe from a zoo. Yeah I don't know either...
 
-[![Travis](https://img.shields.io/travis/Meadowcottage/Project-Neckache/master.svg?style=flat-square)](https://travis-ci.org/Meadowcottage/Project-Neckache) [![Release](https://img.shields.io/github/release/Meadowcottage/Project-Neckache.svg?style=flat-square)](https://github.com/Meadowcottage/Project-Neckache/releases)  [![License](https://img.shields.io/badge/License-GPL%20v3-blue.svg?style=flat-square)](http://www.gnu.org/licenses/)
+ [![Release](https://img.shields.io/github/release/Meadowcottage/Project-Neckache.svg?style=flat-square)](https://github.com/Meadowcottage/Project-Neckache/releases)  [![License](https://img.shields.io/badge/License-GPL%20v3-blue.svg?style=flat-square)](http://www.gnu.org/licenses/)
 
 </br>
 </br>
