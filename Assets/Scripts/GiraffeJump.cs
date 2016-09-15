@@ -22,4 +22,10 @@ public class GiraffeJump : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Space))
             GetComponent<Rigidbody2D>().AddForce(Vector2.up * force);
     }
+
+    // Reset the position of the giraffe when it collides with anything.
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        Application.LoadLevel(Application.loadedLevel);
+    }
 }
