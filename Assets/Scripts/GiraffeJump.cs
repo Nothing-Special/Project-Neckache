@@ -26,6 +26,14 @@ public class GiraffeJump : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Space))
             GetComponent<Rigidbody2D>().AddForce(Vector2.up * force);
     }
+
+    // Reset the position of the giraffe when it collides with anything.
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        Application.LoadLevel(Application.loadedLevel);
+    }
+
+    // Destroy the coin when it's collided with along with adding 1 point to the score.
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.CompareTag("Coin"))
@@ -34,4 +42,5 @@ public class GiraffeJump : MonoBehaviour {
             gm.points += 1;
         }
     }
+
 }
