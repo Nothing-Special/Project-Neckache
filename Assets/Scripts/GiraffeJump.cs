@@ -3,6 +3,8 @@ using System.Collections;
 
 public class GiraffeJump : MonoBehaviour {
 
+    private gameMaster gm;
+
     // Jump force
     public float force = 300;
 
@@ -14,6 +16,8 @@ public class GiraffeJump : MonoBehaviour {
     {
         // Fly towards the right
         GetComponent<Rigidbody2D>().velocity = Vector2.right * speed;
+
+        gm = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<gameMaster>();
     }
 
     // Update is called once per frame
@@ -22,10 +26,12 @@ public class GiraffeJump : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Space))
             GetComponent<Rigidbody2D>().AddForce(Vector2.up * force);
     }
-
-    // Reset the position of the giraffe when it collides with anything.
-    void OnCollisionEnter2D(Collision2D coll)
+    void OnTriggerEnter2D(Collider2D col)
     {
-        Application.LoadLevel(Application.loadedLevel);
+        if (col.CompareTag("Coin"))
+        {
+            Destroy(col.gameObject);
+            gm.points += 1;
+        }
     }
 }
